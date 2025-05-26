@@ -55,6 +55,21 @@ Este projeto é uma aplicação de internet banking desenvolvida em Vue 3 + Type
 - O dashboard exibe um gráfico de barras com o total de transferências recebidas e enviadas.
 - Os valores são atualizados em tempo real conforme o extrato.
 
+## 📡 Endpoints da API utilizados
+
+- `POST /v1/login` — Autenticação do usuário (login)
+- `POST /v1/signup` — Cadastro de novo usuário
+- `GET /v1/my_accounts` — Buscar contas bancárias do usuário logado
+- `GET /v1/available_accounts` — Buscar contas disponíveis para transferência
+- `POST /v1/transfer` — Realizar transferência (PIX ou TED)
+- `GET /v1/statements` — Buscar extrato de transferências (com filtros de data, valor, tipo, etc)
+
+Exemplo de uso de extrato:
+```
+GET /v1/statements?per_page=10
+GET /v1/statements?page=1&per_page=10
+```
+
 ## 🤝 Contribuição
 
 Sinta-se à vontade para abrir issues ou pull requests!
